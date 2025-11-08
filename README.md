@@ -95,6 +95,44 @@
 - Python 3.x
 - tkinter（通常随Python一起安装）
 
+## 打包说明
+
+如果您想将此工具打包成独立的可执行文件（无需Python环境即可运行），请按照以下步骤操作：
+
+### 安装PyInstaller
+
+```bash
+pip install pyinstaller
+```
+
+### 使用批处理文件打包（推荐）
+
+1. 双击运行 `build_app.bat` 文件
+2. 等待打包完成
+3. 打包完成后，可执行文件将位于 `dist` 文件夹中
+
+### 手动打包
+
+1. 打开命令提示符
+2. 导航到工具所在目录
+3. 运行以下命令：
+
+```bash
+pyinstaller --onefile --windowed --name=FileTransferTool file_transfer_tool.py
+```
+
+### 运行打包后的程序
+
+1. 双击运行 `启动文件转移工具.bat` 文件
+2. 或直接运行 `dist\FileTransferTool.exe`
+
+### 打包参数说明
+
+- `--onefile`: 将所有依赖打包成单个可执行文件
+- `--windowed`: 运行时不显示控制台窗口
+- `--name=FileTransferTool`: 指定生成的可执行文件名称
+- `file_transfer_tool.py`: 主程序文件
+
 ## 许可证
 
 本工具为开源软件，可自由使用和修改。
